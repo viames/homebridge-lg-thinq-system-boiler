@@ -1,0 +1,7 @@
+*.tgz
+diagnostics/
+src/
+test/
+scripts/
+eslint.config.js
+tsconfig.json

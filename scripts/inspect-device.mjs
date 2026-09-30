@@ -2,7 +2,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
 import process from 'node:process';
 
-import { ThinQApi } from 'thinqconnect';
+import { ThinQApi } from '../dist/thinq.js';
 
 import {
   getDeviceMetadata,

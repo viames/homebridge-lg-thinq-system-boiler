@@ -5,4 +5,4 @@ diagnostics/*.json
 .env
 .homebridge/
 npm-debug.log*
-
+*.tgz

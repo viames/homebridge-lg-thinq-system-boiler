@@ -1,22 +1,40 @@
 # homebridge-lg-thinq-system-boiler
 
-Experimental Homebridge support for LG ThinQ air-to-water heat pumps exposed by
+Homebridge support for LG ThinQ air-to-water heat pumps exposed by
 the official ThinQ Connect API as `DEVICE_SYSTEM_BOILER`.
 
 The first validation target is an LG THERMA V system with outdoor unit
 `HU091.U43`. The implementation is profile-driven and is intended to support
 other compatible LG system boilers without hard-coded model checks.
 
-## Project status
-
-The repository is in the diagnostic phase. HomeKit accessories are not enabled
-until an anonymized real-device profile has been captured and covered by tests.
-
-Planned HomeKit services:
+## HomeKit services
 
 - space heating and cooling;
 - domestic hot water;
-- current, inlet, and outlet water temperatures when reported by the appliance.
+- power, heat, cool, and automatic modes;
+- current and target temperatures.
+
+The first supported profile is `AWHP_019101_WW`, validated against an LG
+THERMA V `HU091.U43`. Discovery remains device-type based, so compatible LG
+system boilers do not require hard-coded model names.
+
+## Installation
+
+Install the plugin from this repository, then add a platform configuration:
+
+```json
+{
+  "platform": "LGThinQSystemBoiler",
+  "name": "LG ThinQ System Boiler",
+  "country": "IT",
+  "accessToken": "your ThinQ PAT",
+  "refreshInterval": 60
+}
+```
+
+Create the token at <https://connect-pat.lgthinq.com> with device-list,
+device-status, and device-control permissions. Homebridge stores plugin
+configuration in its protected local configuration file.
 
 ## Read-only device inspection
 
@@ -56,4 +74,3 @@ commits. Revoke a token immediately if it is accidentally exposed.
 ## License
 
 MIT
-
