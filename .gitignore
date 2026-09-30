@@ -1,0 +1,8 @@
+node_modules/
+dist/
+diagnostics/*.json
+.DS_Store
+.env
+.homebridge/
+npm-debug.log*
+

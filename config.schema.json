@@ -1,0 +1,37 @@
+{
+  "pluginAlias": "LGThinQSystemBoiler",
+  "pluginType": "platform",
+  "singular": true,
+  "strictValidation": false,
+  "schema": {
+    "type": "object",
+    "required": ["name", "country", "accessToken"],
+    "additionalProperties": false,
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "default": "LG ThinQ System Boiler"
+      },
+      "country": {
+        "title": "LG account country",
+        "type": "string",
+        "default": "IT",
+        "minLength": 2,
+        "maxLength": 2
+      },
+      "accessToken": {
+        "title": "ThinQ Personal Access Token",
+        "type": "string"
+      },
+      "refreshInterval": {
+        "title": "Refresh interval (seconds)",
+        "type": "integer",
+        "default": 60,
+        "minimum": 30,
+        "maximum": 600
+      }
+    }
+  }
+}
+

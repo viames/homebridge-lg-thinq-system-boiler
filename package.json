@@ -1,0 +1,45 @@
+{
+  "name": "homebridge-lg-thinq-system-boiler",
+  "displayName": "LG ThinQ System Boiler",
+  "type": "module",
+  "version": "0.0.0-development",
+  "private": true,
+  "description": "Homebridge support for LG ThinQ air-to-water heat pumps exposed as DEVICE_SYSTEM_BOILER.",
+  "author": "Viames <me@viames.it>",
+  "license": "MIT",
+  "keywords": [
+    "homebridge-plugin",
+    "supports-hap",
+    "lg",
+    "thinq",
+    "therma-v",
+    "heat-pump",
+    "system-boiler"
+  ],
+  "main": "dist/index.js",
+  "engines": {
+    "node": "^22.10.0 || ^24.0.0",
+    "homebridge": "^1.8.0 || ^2.0.0"
+  },
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "inspect-device": "sh ./scripts/inspect-device.sh",
+    "lint": "eslint . --max-warnings=0",
+    "test": "node --test",
+    "check": "npm run lint && npm run build && npm test",
+    "prepublishOnly": "npm run check"
+  },
+  "dependencies": {
+    "thinqconnect": "0.9.10-beta"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.10.0",
+    "eslint": "^10.0.0",
+    "homebridge": "^2.4.0",
+    "rimraf": "^6.1.3",
+    "typescript": "^6.0.0",
+    "typescript-eslint": "^8.67.0"
+  }
+}
+
