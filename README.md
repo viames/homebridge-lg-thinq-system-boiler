@@ -3,9 +3,10 @@
 Homebridge support for LG ThinQ air-to-water heat pumps exposed by
 the official ThinQ Connect API as `DEVICE_SYSTEM_BOILER`.
 
-The first validation target is an LG THERMA V system with outdoor unit
-`HU091.U43`. The implementation is profile-driven and is intended to support
-other compatible LG system boilers without hard-coded model checks.
+The integration has been verified on real hardware with an LG THERMA V system
+and outdoor unit `HU091.U43`. The implementation is profile-driven and is
+intended to support other compatible LG system boilers without hard-coded model
+checks.
 
 ## HomeKit services
 
@@ -14,9 +15,15 @@ other compatible LG system boilers without hard-coded model checks.
 - power, heat, cool, and automatic modes;
 - current and target temperatures.
 
-The first supported profile is `AWHP_019101_WW`, validated against an LG
-THERMA V `HU091.U43`. Discovery remains device-type based, so compatible LG
-system boilers do not require hard-coded model names.
+## Verified compatibility
+
+| LG device | ThinQ profile | Verified HomeKit functions |
+| --- | --- | --- |
+| THERMA V `HU091.U43` | `AWHP_019101_WW` | heating, cooling, automatic mode, domestic hot water, current and target temperatures |
+
+This setup has been verified through Homebridge on a Raspberry Pi 3 Model B
+running 32-bit Raspberry Pi OS. Discovery remains device-type based, so other
+compatible LG system boilers do not require hard-coded model names.
 
 ## Installation
 
