@@ -4,7 +4,7 @@
   "type": "module",
   "version": "0.1.0",
   "description": "Homebridge support for LG ThinQ air-to-water heat pumps exposed as DEVICE_SYSTEM_BOILER.",
-  "author": "Viames <me@viames.it>",
+  "author": "Viames",
   "license": "MIT",
   "keywords": [
     "homebridge-plugin",
