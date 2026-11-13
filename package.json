@@ -2,8 +2,8 @@
   "name": "homebridge-lg-thinq-system-boiler",
   "displayName": "LG ThinQ System Boiler",
   "type": "module",
-  "version": "0.1.3",
-  "description": "Homebridge support for LG ThinQ air-to-water heat pumps exposed as DEVICE_SYSTEM_BOILER.",
+  "version": "0.1.4",
+  "description": "Bring compatible LG heat pumps and hot water into Apple Home through Homebridge and the ThinQ cloud API.",
   "author": "Viames Marino",
   "homepage": "https://github.com/viames/homebridge-lg-thinq-system-boiler#readme",
   "repository": {

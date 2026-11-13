@@ -10,9 +10,11 @@ Per pompe di calore aria-acqua compatibili, tramite il cloud LG ThinQ.
 [![npm](https://img.shields.io/npm/v/homebridge-lg-thinq-system-boiler?label=npm)](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler)
 [![Ultima versione](https://img.shields.io/github/v/release/viames/homebridge-lg-thinq-system-boiler?color=6554c0&label=release)](https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/latest)
 [![Test](https://github.com/viames/homebridge-lg-thinq-system-boiler/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/viames/homebridge-lg-thinq-system-boiler/actions/workflows/test.yml)
-[![Licenza MIT](https://img.shields.io/badge/license-MIT-296a56)](LICENSE)
+[![Licenza MIT](https://img.shields.io/badge/license-MIT-296a56)](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/LICENSE)
 
-[English](README.md) · **Italiano**
+[Repository GitHub](https://github.com/viames/homebridge-lg-thinq-system-boiler)
+
+[English](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/README.md) · **Italiano**
 
 [npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler) · [Installazione](#installazione) · [Compatibilità](#compatibilità) · [Configurazione](#configurazione) · [Problemi comuni](#problemi-comuni)
 
@@ -68,20 +70,20 @@ Il token è una credenziale. Conserva riservati anche configurazione Homebridge 
 
 Prima esegui un backup di configurazione e associazioni Homebridge. Conserva separatamente anche l'archivio del plugin: i pacchetti GitHub possono non essere inclusi nei backup.
 
-In **Homebridge UI → Plugin**, cerca `homebridge-lg-thinq-system-boiler` e installa il [pacchetto npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler). In alternativa, la procedura seguente installa l'**archivio GitHub 0.1.3**, con questa documentazione e il modulo aggiornato. La versione 0.1.3 aggiunge il supporto a Node.js 26 e gestisce gli errori di lettura in background senza modificare i comandi della pompa.
+In **Homebridge UI → Plugin**, cerca `homebridge-lg-thinq-system-boiler` e installa il [pacchetto npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler). In alternativa, la procedura seguente installa l'**archivio GitHub 0.1.4**, con questa documentazione e il modulo aggiornato. La versione 0.1.3 aggiunge il supporto a Node.js 26 e gestisce gli errori di lettura in background senza modificare i comandi della pompa.
 
 Nell'immagine ufficiale Raspberry Pi, dal terminale Homebridge:
 
 ```sh
 cd /var/lib/homebridge
-npm install --omit=dev --ignore-scripts https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/download/v0.1.3/homebridge-lg-thinq-system-boiler-0.1.3.tgz
+npm install --omit=dev --ignore-scripts https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/download/v0.1.4/homebridge-lg-thinq-system-boiler-0.1.4.tgz
 ```
 
 Usa l'account proprietario della cartella. Via SSH potrebbe essere necessario passare all'utente del servizio. Per un'installazione npm globale già esistente, usa `npm install -g --omit=dev --ignore-scripts` con lo stesso URL e la convenzione di privilegi del tuo impianto.
 
 Su Docker/NAS usa la procedura del tuo installer e la cartella dei plugin realmente caricata da Homebridge, con persistenza dopo la ricreazione del container. Non installare una seconda copia di Homebridge per correggere un errore di permessi.
 
-Per scegliere invece npm, usa `npm install homebridge-lg-thinq-system-boiler@0.1.3` nella cartella dei plugin esistente (`-g` per un impianto globale). L'indicizzazione nella ricerca può richiedere tempo.
+Per scegliere invece npm, usa `npm install homebridge-lg-thinq-system-boiler@0.1.4` nella cartella dei plugin esistente (`-g` per un impianto globale). L'indicizzazione nella ricerca può richiedere tempo.
 
 La [release](https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/latest) contiene JavaScript compilato e `SHA256SUMS`. Dopo aver scaricato entrambi, verifica con `shasum -a 256 -c SHA256SUMS` su macOS o `sha256sum -c SHA256SUMS` su Linux. Non serve compilare TypeScript sul Raspberry.
 
@@ -89,7 +91,7 @@ La [release](https://github.com/viames/homebridge-lg-thinq-system-boiler/release
 
 In Homebridge UI 5.29: **Plugins → LG ThinQ System Boiler → Plugin Actions → Plugin Config**. Altre versioni possono usare la voce **Impostazioni/Settings**.
 
-![Modulo reale Homebridge con paese di esempio e token dimostrativo mascherato](docs/images/settings.png)
+![Modulo reale Homebridge con paese di esempio e token dimostrativo mascherato](https://raw.githubusercontent.com/viames/homebridge-lg-thinq-system-boiler/main/docs/images/settings.png)
 
 *Istanza separata per la documentazione, con dati dimostrativi. Non usa account reali e non collega una pompa di calore.*
 
@@ -185,4 +187,4 @@ Homebridge conserva il token nella configurazione locale. Il campo mascherato no
 
 ---
 
-Software indipendente di [viames](https://github.com/viames), con [licenza MIT](LICENSE). Non affiliato a LG o Apple e non verificato dal progetto Homebridge. [Guide tecniche](docs/configuration.md) · [Contribuire](CONTRIBUTING.md) · [Homebridge Prana Local](https://github.com/viames/homebridge-prana-local).
+Software indipendente di [viames](https://github.com/viames), con [licenza MIT](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/LICENSE). Non affiliato a LG o Apple e non verificato dal progetto Homebridge. [Guide tecniche](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/configuration.md) · [Contribuire](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/CONTRIBUTING.md) · [Homebridge Prana Local](https://github.com/viames/homebridge-prana-local).

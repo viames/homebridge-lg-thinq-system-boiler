@@ -10,11 +10,13 @@ For compatible LG ThinQ air-to-water heat pumps, through LG's cloud API.
 [![npm](https://img.shields.io/npm/v/homebridge-lg-thinq-system-boiler?label=npm)](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler)
 [![Latest release](https://img.shields.io/github/v/release/viames/homebridge-lg-thinq-system-boiler?color=6554c0&label=release)](https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/latest)
 [![Tests](https://github.com/viames/homebridge-lg-thinq-system-boiler/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/viames/homebridge-lg-thinq-system-boiler/actions/workflows/test.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-296a56)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-296a56)](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/LICENSE)
 
-**English** · [Italiano](README.it.md)
+[GitHub repository](https://github.com/viames/homebridge-lg-thinq-system-boiler)
 
-[npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler) · [Get started](#get-started) · [Compatibility](#compatibility) · [Settings](docs/configuration.md) · [Help](docs/troubleshooting.md)
+**English** · [Italiano](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/README.it.md)
+
+[npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler) · [Get started](#get-started) · [Compatibility](#compatibility) · [Settings](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/configuration.md) · [Help](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/troubleshooting.md)
 
 
 ---
@@ -29,7 +31,7 @@ Connect a compatible LG system boiler to the Homebridge you already use. The plu
 | Target temperature | Hot-water target temperature | Celsius display |
 | Uses the unit's air/water control source | Separate thermostat service | Values reported by ThinQ |
 
-The climate reading may be **circuit water temperature**, depending on the unit's control source. It is not necessarily room-air temperature. [Exact behavior and limits →](docs/configuration.md#controls-and-temperature-meaning)
+The climate reading may be **circuit water temperature**, depending on the unit's control source. It is not necessarily room-air temperature. [Exact behavior and limits →](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/configuration.md#controls-and-temperature-meaning)
 
 ```mermaid
 flowchart LR
@@ -62,19 +64,19 @@ Check that your heat pump is online in the LG ThinQ app. Note the **country of t
 
 ### 2. Create a Personal Access Token
 
-Use [LG's Personal Access Token portal](https://connect-pat.lgthinq.com) with the same account. Enable device-list, device-status and device-control permissions. Enter the token only in your local Homebridge configuration. [Token setup and permissions →](docs/installation.md#personal-access-token)
+Use [LG's Personal Access Token portal](https://connect-pat.lgthinq.com) with the same account. Enable device-list, device-status and device-control permissions. Enter the token only in your local Homebridge configuration. [Token setup and permissions →](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/installation.md#personal-access-token)
 
 ### 3. Install and configure
 
-In **Homebridge UI → Plugins**, search for `homebridge-lg-thinq-system-boiler` and install the [npm package](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler). You can also [download the compiled GitHub release](https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/latest) and follow the [installation guide](docs/installation.md). The linked guide covers the **GitHub 0.1.3 archive**. Version 0.1.3 adds Node.js 26 support and handles background polling failures without changing control commands.
+In **Homebridge UI → Plugins**, search for `homebridge-lg-thinq-system-boiler` and install the [npm package](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler). You can also [download the compiled GitHub release](https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/latest) and follow the [installation guide](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/installation.md). The linked guide covers the **GitHub 0.1.4 archive**. Version 0.1.3 adds Node.js 26 support and handles background polling failures without changing control commands.
 
 Open **Plugin Actions → Plugin Config** (or **Settings**, depending on UI version). Enter your account country, token and desired polling interval.
 
-![Real Homebridge settings with example account country and a masked demonstration token](docs/images/settings.png)
+![Real Homebridge settings with example account country and a masked demonstration token](https://raw.githubusercontent.com/viames/homebridge-lg-thinq-system-boiler/main/docs/images/settings.png)
 
 *Real Homebridge UI in a separate documentation instance. The masked value is a dummy example; no real account or heat-pump connection is used.*
 
-Prefer JSON? Start with the [minimal configuration](docs/configuration.md#minimal-configuration).
+Prefer JSON? Start with the [minimal configuration](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/configuration.md#minimal-configuration).
 
 ### 4. Restart and open Apple Home
 
@@ -90,24 +92,24 @@ Look for both thermostat services. Home may group them; inspect the accessory se
 - **The background interval defaults to 60 seconds.** Home reads and commands can trigger additional API requests; this is not a push integration.
 - Schedules, energy statistics, multi-zone control and installer functions are not exposed by this release.
 
-[Control mapping and limitations →](docs/configuration.md#controls-and-temperature-meaning)
+[Control mapping and limitations →](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/configuration.md#controls-and-temperature-meaning)
 
 ## Guides and support
 
 | I want to… | Open |
 | :--- | :--- |
-| Install, configure a token, update or remove | [Installation guide](docs/installation.md) |
-| Understand settings, temperatures and controls | [Configuration reference](docs/configuration.md) |
-| Fix discovery, authentication or missing services | [Troubleshooting and FAQ](docs/troubleshooting.md) |
-| Read the complete Italian guide | [Documentazione italiana](README.it.md) |
+| Install, configure a token, update or remove | [Installation guide](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/installation.md) |
+| Understand settings, temperatures and controls | [Configuration reference](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/configuration.md) |
+| Fix discovery, authentication or missing services | [Troubleshooting and FAQ](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/troubleshooting.md) |
+| Read the complete Italian guide | [Documentazione italiana](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/README.it.md) |
 | Report a bug or another model | [Issue forms](https://github.com/viames/homebridge-lg-thinq-system-boiler/issues/new/choose) |
-| Inspect compatibility without sending commands | [Read-only diagnostics](docs/troubleshooting.md#read-only-device-inspection) |
-| Contribute code | [Contributing](CONTRIBUTING.md) |
+| Inspect compatibility without sending commands | [Read-only diagnostics](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/troubleshooting.md#read-only-device-inspection) |
+| Contribute code | [Contributing](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/CONTRIBUTING.md) |
 
-The token grants access to the permissions selected at LG. Homebridge stores it in its local configuration; protect that file and its backups. The UI masks the input, but masking is not encryption. [Token and diagnostic privacy →](docs/troubleshooting.md#token-and-diagnostic-privacy)
+The token grants access to the permissions selected at LG. Homebridge stores it in its local configuration; protect that file and its backups. The UI masks the input, but masking is not encryption. [Token and diagnostic privacy →](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/docs/troubleshooting.md#token-and-diagnostic-privacy)
 
 ---
 
-Independent community software by [viames](https://github.com/viames), under the [MIT license](LICENSE). Not affiliated with LG or Apple and not verified by Homebridge. Product names belong to their respective owners.
+Independent community software by [viames](https://github.com/viames), under the [MIT license](https://github.com/viames/homebridge-lg-thinq-system-boiler/blob/main/LICENSE). Not affiliated with LG or Apple and not verified by Homebridge. Product names belong to their respective owners.
 
 Uses LG ThinQ Connect API conventions described in [LG's SDK documentation](https://github.com/thinq-connect/jsthinqconnect). Also by viames: [Homebridge Prana Local](https://github.com/viames/homebridge-prana-local), for local PRANA ventilation control.

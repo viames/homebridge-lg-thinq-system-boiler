@@ -22,9 +22,9 @@ The [LG SDK README](https://github.com/thinq-connect/jsthinqconnect#obtaining-an
 
 ## Install from GitHub
 
-This guide installs the **compiled GitHub 0.1.3 archive**, including the new documentation and settings help. The plugin is also [published on npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler). Version 0.1.3 adds Node.js 26 support and background polling error handling; control commands are unchanged.
+This guide installs the **compiled GitHub 0.1.4 archive**, including the new documentation and settings help. The plugin is also [published on npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler). Version 0.1.3 adds Node.js 26 support and background polling error handling; control commands are unchanged.
 
-If choosing the npm distribution, use `npm install homebridge-lg-thinq-system-boiler@0.1.3` in your existing plugin directory (or `-g` for an existing global setup). A bare package-name command follows npm, not a GitHub release. Plugin-search indexing may take time after npm publication.
+If choosing the npm distribution, use `npm install homebridge-lg-thinq-system-boiler@0.1.4` in your existing plugin directory (or `-g` for an existing global setup). A bare package-name command follows npm, not a GitHub release. Plugin-search indexing may take time after npm publication.
 
 ### Official Raspberry Pi image / apt installation
 
@@ -32,7 +32,7 @@ In your Homebridge UI terminal, use the standard storage directory:
 
 ```sh
 cd /var/lib/homebridge
-npm install --omit=dev --ignore-scripts https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/download/v0.1.3/homebridge-lg-thinq-system-boiler-0.1.3.tgz
+npm install --omit=dev --ignore-scripts https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/download/v0.1.4/homebridge-lg-thinq-system-boiler-0.1.4.tgz
 ```
 
 Use the account that owns that directory. An SSH session may need to switch to the Homebridge service account first. Do not change directory ownership or install a second Homebridge copy to resolve a permissions problem.
@@ -42,7 +42,7 @@ Use the account that owns that directory. An SSH session may need to switch to t
 If your existing Homebridge plugins are installed globally:
 
 ```sh
-npm install -g --omit=dev --ignore-scripts https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/download/v0.1.3/homebridge-lg-thinq-system-boiler-0.1.3.tgz
+npm install -g --omit=dev --ignore-scripts https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/download/v0.1.4/homebridge-lg-thinq-system-boiler-0.1.4.tgz
 ```
 
 Follow your existing privilege convention. System-wide npm setups may need `sudo`; user-managed Node installations normally do not.
