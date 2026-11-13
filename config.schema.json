@@ -3,6 +3,7 @@
   "pluginType": "platform",
   "singular": true,
   "strictValidation": false,
+  "headerDisplay": "Connect compatible LG system boilers through the LG ThinQ cloud API. Use the country of your LG account and a Personal Access Token with device-list, device-status and device-control permissions.",
   "schema": {
     "type": "object",
     "required": ["name", "country", "accessToken"],
@@ -22,7 +23,10 @@
       },
       "accessToken": {
         "title": "ThinQ Personal Access Token",
-        "type": "string"
+        "type": "string",
+        "x-schema-form": {
+          "type": "password"
+        }
       },
       "refreshInterval": {
         "title": "Refresh interval (seconds)",

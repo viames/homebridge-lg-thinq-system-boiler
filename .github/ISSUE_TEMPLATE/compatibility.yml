@@ -1,0 +1,23 @@
+name: Hardware compatibility report
+description: Share tested behavior for another LG system boiler.
+title: "[Hardware] "
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Printed model and ThinQ profile/type, if known
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Plugin, Homebridge, Node.js and operating system versions
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Controls and temperature sources actually tested
+      description: "Separate confirmed behavior, failures and untested features. Review diagnostic output before sharing; never attach a PAT or complete configuration."
+    validations:
+      required: true

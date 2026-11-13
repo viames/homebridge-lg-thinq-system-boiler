@@ -19,3 +19,16 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run check
       - run: npm pack --dry-run --ignore-scripts
+      - name: Check distribution contents
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import { execFileSync } from 'node:child_process';
+          const manifest = JSON.parse(execFileSync('npm', ['pack', '--dry-run', '--ignore-scripts', '--json'], { encoding: 'utf8' }))[0];
+          const files = new Set(manifest.files.map(file => file.path));
+          for (const file of ['dist/index.js', 'dist/platform.js', 'dist/thinq.js', 'config.schema.json', 'README.md', 'README.it.md', 'docs/images/settings.png', 'docs/installation.md', 'docs/configuration.md', 'docs/troubleshooting.md']) {
+            assert(files.has(file), `Missing distribution file: ${file}`);
+          }
+          assert(![...files].some(file => file.startsWith('diagnostics/') || file.startsWith('.env')));
+          console.log('Compiled runtime and documentation are included; diagnostics are excluded.');
+          JS

@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a reproducible LG system boiler integration problem.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Omit PATs, LG passwords, device IDs, serial numbers, home/network identifiers and full configurations."
+  - type: input
+    id: model
+    attributes:
+      label: Printed model and ThinQ profile/type, if known
+      placeholder: "THERMA V HU091.U43 / AWHP_019101_WW / DEVICE_SYSTEM_BOILER"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Plugin, Homebridge, Node.js and operating system versions
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Steps, expected result and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Short redacted error excerpt
+      render: text
