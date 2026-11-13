@@ -6,7 +6,7 @@ Focused bug reports, hardware compatibility reports and pull requests are welcom
 
 ## Development
 
-Use Node.js 22 or 24, matching the project CI:
+Use Node.js 22, 24 or 26, matching the project CI:
 
 ```sh
 npm ci --ignore-scripts

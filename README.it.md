@@ -47,7 +47,7 @@ flowchart LR
 | **LG THERMA V, unità esterna HU091.U43** | Validazione fisica registrata dal progetto: clima, sanitario, modalità e temperature |
 | **Profilo ThinQ AWHP_019101_WW** | Profilo dell'impianto verificato |
 | Raspberry Pi 3 con Raspberry Pi OS a 32 bit | Host della validazione fisica registrata |
-| Node.js 22 e 24 | Lint, build, test e controllo pacchetto in [GitHub Actions](https://github.com/viames/homebridge-lg-thinq-system-boiler/actions/workflows/test.yml) |
+| Node.js 22, 24 e 26 | Lint, build, test e controllo pacchetto in [GitHub Actions](https://github.com/viames/homebridge-lg-thinq-system-boiler/actions/workflows/test.yml) |
 | Homebridge 1.8+ e 2.x | Compatibilità dichiarata; non equivale a prove fisiche su ogni versione |
 | Altre unità `DEVICE_SYSTEM_BOILER` | Rilevate per tipo; la mappatura di stato e comandi va verificata |
 | Normali condizionatori ThinQ e altri tipi di dispositivo | Fuori dall'ambito del plugin |
@@ -68,20 +68,20 @@ Il token è una credenziale. Conserva riservati anche configurazione Homebridge 
 
 Prima esegui un backup di configurazione e associazioni Homebridge. Conserva separatamente anche l'archivio del plugin: i pacchetti GitHub possono non essere inclusi nei backup.
 
-La guida installa l'**archivio GitHub 0.1.2**, con questa documentazione e il modulo aggiornato. Il plugin è anche [pubblicato su npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler): al momento di questa revisione è disponibile la versione npm 0.1.1, con lo stesso sorgente di controllo della pompa e documentazione/modulo precedenti.
+La guida installa l'**archivio GitHub 0.1.3**, con questa documentazione e il modulo aggiornato. Il plugin è anche [pubblicato su npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler): la versione 0.1.3 aggiunge il supporto a Node.js 26 e gestisce gli errori di lettura in background senza modificare i comandi della pompa.
 
 Nell'immagine ufficiale Raspberry Pi, dal terminale Homebridge:
 
 ```sh
 cd /var/lib/homebridge
-npm install --omit=dev --ignore-scripts https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/download/v0.1.2/homebridge-lg-thinq-system-boiler-0.1.2.tgz
+npm install --omit=dev --ignore-scripts https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/download/v0.1.3/homebridge-lg-thinq-system-boiler-0.1.3.tgz
 ```
 
 Usa l'account proprietario della cartella. Via SSH potrebbe essere necessario passare all'utente del servizio. Per un'installazione npm globale già esistente, usa `npm install -g --omit=dev --ignore-scripts` con lo stesso URL e la convenzione di privilegi del tuo impianto.
 
 Su Docker/NAS usa la procedura del tuo installer e la cartella dei plugin realmente caricata da Homebridge, con persistenza dopo la ricreazione del container. Non installare una seconda copia di Homebridge per correggere un errore di permessi.
 
-Per scegliere invece npm, usa `npm install homebridge-lg-thinq-system-boiler@0.1.1` nella cartella dei plugin esistente (`-g` per un impianto globale). L'indicizzazione nella ricerca può richiedere tempo.
+Per scegliere invece npm, usa `npm install homebridge-lg-thinq-system-boiler@0.1.3` nella cartella dei plugin esistente (`-g` per un impianto globale). L'indicizzazione nella ricerca può richiedere tempo.
 
 La [release](https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/latest) contiene JavaScript compilato e `SHA256SUMS`. Dopo aver scaricato entrambi, verifica con `shasum -a 256 -c SHA256SUMS` su macOS o `sha256sum -c SHA256SUMS` su Linux. Non serve compilare TypeScript sul Raspberry.
 

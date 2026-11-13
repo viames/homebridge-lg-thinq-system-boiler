@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3
+
+- Catch initial/background status failures and release polling timers at shutdown.
+- Add a regression check for offline recovery using real HomeKit services.
+- Declare Node.js 26 support and add it to the CI matrix.
+
 ## 0.1.2
 
 - Reworked the project page to match Homebridge Prana Local: centered introduction, badges, quick navigation, feature summary and connection diagram.

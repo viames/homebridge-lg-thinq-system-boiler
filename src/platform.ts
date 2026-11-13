@@ -89,6 +89,11 @@ export class LGThinQSystemBoilerPlatform implements DynamicPlatformPlugin {
 
   get characteristic(): API['hap']['Characteristic'] { return this.api.hap.Characteristic; }
   get pollingInterval(): number { return this.refreshIntervalMs; }
+
+  /** Report background failures without allowing a rejected poll to stop Homebridge. */
+  reportPollingError(alias: string, error: unknown): void {
+    this.log.warn('LG ThinQ status request failed for %s: %s', alias, errorMessage(error));
+  }
 }
 
 class SystemBoilerAccessory {
@@ -114,9 +119,16 @@ class SystemBoilerAccessory {
       .setCharacteristic(Characteristic.SerialNumber, accessory.UUID);
     this.configureClimate();
     this.configureHotWater();
-    void this.refresh();
-    const timer = setInterval(() => void this.refresh(), this.platform.pollingInterval);
+    // Background reads handle their own errors; HomeKit reads still report failures to callers.
+    this.refreshInBackground();
+    const timer = setInterval(() => this.refreshInBackground(), this.platform.pollingInterval);
     timer.unref();
+    this.platform.api.on('shutdown', () => clearInterval(timer));
+  }
+
+  /** Catch startup and timer failures while leaving the next poll free to recover. */
+  private refreshInBackground(): void {
+    void this.refresh().catch((error: unknown) => this.platform.reportPollingError(this.metadata.alias, error));
   }
 
   private configureClimate(): void {

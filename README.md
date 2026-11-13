@@ -47,7 +47,7 @@ flowchart LR
 | **LG THERMA V · outdoor unit HU091.U43** | Recorded project hardware validation: climate, hot water, modes and temperatures |
 | **ThinQ profile AWHP_019101_WW** | Profile of the validated installation |
 | Raspberry Pi 3 with 32-bit Raspberry Pi OS | Host used for the recorded hardware validation |
-| Node.js 22 / 24 | Lint, build, tests and package checks in [GitHub Actions](https://github.com/viames/homebridge-lg-thinq-system-boiler/actions/workflows/test.yml) |
+| Node.js 22 / 24 / 26 | Lint, build, tests and package checks in [GitHub Actions](https://github.com/viames/homebridge-lg-thinq-system-boiler/actions/workflows/test.yml) |
 | Homebridge 1.8+ / 2.x | Declared package compatibility; not a claim of hardware testing on every version |
 | Other ThinQ `DEVICE_SYSTEM_BOILER` units | Discovered by device type; their state/control mapping still needs verification |
 | Ordinary ThinQ air conditioners and other device types | Outside this plugin's scope |
@@ -66,7 +66,7 @@ Use [LG's Personal Access Token portal](https://connect-pat.lgthinq.com) with th
 
 ### 3. Install and configure
 
-[**Download the compiled release**](https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/latest) and follow the [installation guide](docs/installation.md). The guide below installs the **GitHub 0.1.2 archive**, including these guides and updated settings help. The plugin is also [published on npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler); the npm release available when this documentation was prepared is 0.1.1. Both use the same heat-pump runtime source.
+[**Download the compiled release**](https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/latest) and follow the [installation guide](docs/installation.md). The guide below installs the **GitHub 0.1.3 archive**, including these guides and updated settings help. The plugin is also [published on npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler); version 0.1.3 adds Node.js 26 support and handles background polling failures without changing control commands.
 
 Open **Plugin Actions → Plugin Config** (or **Settings**, depending on UI version). Enter your account country, token and desired polling interval.
 
