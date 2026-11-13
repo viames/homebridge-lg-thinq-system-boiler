@@ -1,4 +1,4 @@
-<div align="center">
+![LG ThinQ — Heating and hot water. In Apple Home.](https://raw.githubusercontent.com/viames/homebridge-lg-thinq-system-boiler/main/.github/assets/cover.jpg)
 
 # Homebridge LG ThinQ System Boiler
 
@@ -15,7 +15,6 @@ For compatible LG ThinQ air-to-water heat pumps, through LG's cloud API.
 
 [Get started](#get-started) · [Compatibility](#compatibility) · [Settings](docs/configuration.md) · [Help](docs/troubleshooting.md)
 
-</div>
 
 ---
 
