@@ -7,13 +7,14 @@
 Choose heating or cooling, adjust target temperatures and control domestic hot water.<br>
 For compatible LG ThinQ air-to-water heat pumps, through LG's cloud API.
 
+[![npm](https://img.shields.io/npm/v/homebridge-lg-thinq-system-boiler?label=npm)](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler)
 [![Latest release](https://img.shields.io/github/v/release/viames/homebridge-lg-thinq-system-boiler?color=6554c0&label=release)](https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/latest)
 [![Tests](https://github.com/viames/homebridge-lg-thinq-system-boiler/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/viames/homebridge-lg-thinq-system-boiler/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-296a56)](LICENSE)
 
 **English** · [Italiano](README.it.md)
 
-[Get started](#get-started) · [Compatibility](#compatibility) · [Settings](docs/configuration.md) · [Help](docs/troubleshooting.md)
+[npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler) · [Get started](#get-started) · [Compatibility](#compatibility) · [Settings](docs/configuration.md) · [Help](docs/troubleshooting.md)
 
 
 ---
@@ -65,7 +66,7 @@ Use [LG's Personal Access Token portal](https://connect-pat.lgthinq.com) with th
 
 ### 3. Install and configure
 
-[**Download the compiled release**](https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/latest) and follow the [installation guide](docs/installation.md). The guide below installs the **GitHub 0.1.3 archive**, including these guides and updated settings help. The plugin is also [published on npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler); version 0.1.3 adds Node.js 26 support and handles background polling failures without changing control commands.
+In **Homebridge UI → Plugins**, search for `homebridge-lg-thinq-system-boiler` and install the [npm package](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler). You can also [download the compiled GitHub release](https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/latest) and follow the [installation guide](docs/installation.md). The linked guide covers the **GitHub 0.1.3 archive**. Version 0.1.3 adds Node.js 26 support and handles background polling failures without changing control commands.
 
 Open **Plugin Actions → Plugin Config** (or **Settings**, depending on UI version). Enter your account country, token and desired polling interval.
 

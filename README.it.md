@@ -7,13 +7,14 @@
 Scegli caldo o freddo, regola le temperature e gestisci l'acqua sanitaria.<br>
 Per pompe di calore aria-acqua compatibili, tramite il cloud LG ThinQ.
 
+[![npm](https://img.shields.io/npm/v/homebridge-lg-thinq-system-boiler?label=npm)](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler)
 [![Ultima versione](https://img.shields.io/github/v/release/viames/homebridge-lg-thinq-system-boiler?color=6554c0&label=release)](https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/latest)
 [![Test](https://github.com/viames/homebridge-lg-thinq-system-boiler/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/viames/homebridge-lg-thinq-system-boiler/actions/workflows/test.yml)
 [![Licenza MIT](https://img.shields.io/badge/license-MIT-296a56)](LICENSE)
 
 [English](README.md) · **Italiano**
 
-[Installazione](#installazione) · [Compatibilità](#compatibilità) · [Configurazione](#configurazione) · [Problemi comuni](#problemi-comuni)
+[npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler) · [Installazione](#installazione) · [Compatibilità](#compatibilità) · [Configurazione](#configurazione) · [Problemi comuni](#problemi-comuni)
 
 
 ---
@@ -63,11 +64,11 @@ Apri il [portale PAT di LG](https://connect-pat.lgthinq.com) con lo stesso accou
 
 Il token è una credenziale. Conserva riservati anche configurazione Homebridge e backup. Se viene esposto o non serve più, revocalo dal portale LG. Il plugin non genera o rinnova automaticamente i token. [Guida LG](https://github.com/thinq-connect/jsthinqconnect#obtaining-and-using-a-personal-access-token).
 
-### 2. Installa l'archivio compilato
+### 2. Installa il plugin
 
 Prima esegui un backup di configurazione e associazioni Homebridge. Conserva separatamente anche l'archivio del plugin: i pacchetti GitHub possono non essere inclusi nei backup.
 
-La guida installa l'**archivio GitHub 0.1.3**, con questa documentazione e il modulo aggiornato. Il plugin è anche [pubblicato su npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler): la versione 0.1.3 aggiunge il supporto a Node.js 26 e gestisce gli errori di lettura in background senza modificare i comandi della pompa.
+In **Homebridge UI → Plugin**, cerca `homebridge-lg-thinq-system-boiler` e installa il [pacchetto npm](https://www.npmjs.com/package/homebridge-lg-thinq-system-boiler). In alternativa, la procedura seguente installa l'**archivio GitHub 0.1.3**, con questa documentazione e il modulo aggiornato. La versione 0.1.3 aggiunge il supporto a Node.js 26 e gestisce gli errori di lettura in background senza modificare i comandi della pompa.
 
 Nell'immagine ufficiale Raspberry Pi, dal terminale Homebridge:
 
