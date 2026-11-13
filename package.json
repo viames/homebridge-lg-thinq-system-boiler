@@ -2,9 +2,17 @@
   "name": "homebridge-lg-thinq-system-boiler",
   "displayName": "LG ThinQ System Boiler",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Homebridge support for LG ThinQ air-to-water heat pumps exposed as DEVICE_SYSTEM_BOILER.",
-  "author": "Viames",
+  "author": "Viames Marino",
+  "homepage": "https://github.com/viames/homebridge-lg-thinq-system-boiler#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viames/homebridge-lg-thinq-system-boiler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/viames/homebridge-lg-thinq-system-boiler/issues"
+  },
   "license": "MIT",
   "keywords": [
     "homebridge-plugin",
@@ -16,6 +24,12 @@
     "system-boiler"
   ],
   "main": "dist/index.js",
+  "files": [
+    "dist/",
+    "config.schema.json",
+    "README.md",
+    "LICENSE"
+  ],
   "engines": {
     "node": "^22.10.0 || ^24.0.0",
     "homebridge": "^1.8.0 || ^2.0.0"

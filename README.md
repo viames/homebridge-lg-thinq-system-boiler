@@ -27,7 +27,16 @@ compatible LG system boilers do not require hard-coded model names.
 
 ## Installation
 
-Install the plugin from this repository, then add a platform configuration:
+Install the packaged release from **Homebridge UI → Plugins → wrench menu →
+Install a specific plugin**:
+
+```text
+https://github.com/viames/homebridge-lg-thinq-system-boiler/releases/download/v0.1.1/homebridge-lg-thinq-system-boiler-0.1.1.tgz
+```
+
+The archive includes the compiled plugin and needs no TypeScript build on the
+Homebridge host. Restart Homebridge after configuring it. Add a platform
+configuration:
 
 ```json
 {
@@ -71,6 +80,10 @@ ignored by Git.
 npm install
 npm run check
 ```
+
+CI runs lint, the TypeScript build, tests and a package-content check on Node.js
+22 and 24. These automated checks are separate from the hardware validation
+documented above.
 
 ## Security
 
