@@ -27,6 +27,16 @@ compatible LG system boilers do not require hard-coded model names.
 
 ## Installation
 
+In **Homebridge UI → Plugins**, search for
+`homebridge-lg-thinq-system-boiler` and install it. From a terminal in your
+Homebridge plugin directory, the equivalent command is:
+
+```sh
+npm install homebridge-lg-thinq-system-boiler
+```
+
+### GitHub release archive
+
 Install the packaged release from **Homebridge UI → Plugins → wrench menu →
 Install a specific plugin**:
 
